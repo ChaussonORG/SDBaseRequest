@@ -16,14 +16,14 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "SDBaseRequest"
-  s.version      = "0.1" 
+  s.version      = "0.2" 
   s.summary      = "Using CHNetworking Requests "
   # This description is used to generate tags and improve search results.
   #   * Think: What does it do? Why did you write it? What is the focus?
   #   * Try to keep it short, snappy and to the point.
   #   * Write the description between the DESC delimiters below.
   #   * Finally, don't worry about the indent, CocoaPods strips it!
-  s.description  = "It's descripition how to use CHNetworking ,there are some CHNetRequest to be used "
+  s.description  = "add SDFeedBackAPI Request,edit readme pretty "
   s.homepage     = "https://github.com/ChaussonORG/SDBaseRequest.git"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
 
@@ -77,7 +77,9 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/ChaussonORG/SDBaseRequest.git", :tag => "0.1"} # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
+  s.source       = { :git => "https://github.com/ChaussonORG/SDBaseRequest.git", :tag => "0.2"}
+
+ # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
   #  CocoaPods is smart about how it includes source code. For source files
   #  giving a folder will include any swift, h, m, mm, c & cpp files.

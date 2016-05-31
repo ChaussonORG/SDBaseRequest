@@ -8,13 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-//! Project version number for SDBaseRequest.
-FOUNDATION_EXPORT double SDBaseRequestVersionNumber;
-
-//! Project version string for SDBaseRequest.
-FOUNDATION_EXPORT const unsigned char SDBaseRequestVersionString[];
-
-// In this header, you should import all the public headers of your framework using statements like #import <SDBaseRequest/PublicHeader.h>
 #import "SDLoginAPI.h"
 #import "SDRegisterAPI.h"
 #import "SDResetPasswordAPI.h"
@@ -22,6 +15,6 @@ FOUNDATION_EXPORT const unsigned char SDBaseRequestVersionString[];
 #import "SDForgetPasswordAPI.h"
 #import "SDSendCodeAPI.h"
 #import "SDUpdateProfileAPI.h"
-#import <CHNetworking/CHNetworking.h>
+
 
 
