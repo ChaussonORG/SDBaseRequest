@@ -22,6 +22,7 @@
 		064C81CF1CFD8FCE00BB186F /* SDUpdateProfileAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 064C81C51CFD8FCE00BB186F /* SDUpdateProfileAPI.m */; };
 		064C81D01CFD8FCE00BB186F /* SDUploadImageAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 064C81C71CFD8FCE00BB186F /* SDUploadImageAPI.m */; };
 		064C81D31CFD909200BB186F /* SDFeedBackAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 064C81D21CFD909200BB186F /* SDFeedBackAPI.m */; };
+		06F8160C1D210A7C001F68AF /* SDAuthorLoginAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 06F8160B1D210A7C001F68AF /* SDAuthorLoginAPI.m */; };
 		77738627144BF3C5DA5E39A8 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 12540597071F32A8B8A71940 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,8 @@
 		064C81C71CFD8FCE00BB186F /* SDUploadImageAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDUploadImageAPI.m; sourceTree = "<group>"; };
 		064C81D11CFD909200BB186F /* SDFeedBackAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDFeedBackAPI.h; sourceTree = "<group>"; };
 		064C81D21CFD909200BB186F /* SDFeedBackAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDFeedBackAPI.m; sourceTree = "<group>"; };
+		06F8160A1D210A7C001F68AF /* SDAuthorLoginAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SDAuthorLoginAPI.h; sourceTree = "<group>"; };
+		06F8160B1D210A7C001F68AF /* SDAuthorLoginAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SDAuthorLoginAPI.m; sourceTree = "<group>"; };
 		086D36AABB5186618A5221B6 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		12540597071F32A8B8A71940 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		EF8321DF2C3368CCE542CC81 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -145,6 +148,8 @@
 				064C81C71CFD8FCE00BB186F /* SDUploadImageAPI.m */,
 				064C81D11CFD909200BB186F /* SDFeedBackAPI.h */,
 				064C81D21CFD909200BB186F /* SDFeedBackAPI.m */,
+				06F8160A1D210A7C001F68AF /* SDAuthorLoginAPI.h */,
+				06F8160B1D210A7C001F68AF /* SDAuthorLoginAPI.m */,
 			);
 			path = SDBaseRequest;
 			sourceTree = "<group>";
@@ -279,6 +284,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				06F8160C1D210A7C001F68AF /* SDAuthorLoginAPI.m in Sources */,
 				064C81CF1CFD8FCE00BB186F /* SDUpdateProfileAPI.m in Sources */,
 				064C81C91CFD8FCE00BB186F /* SDBaseResponse.m in Sources */,
 				064C81CE1CFD8FCE00BB186F /* SDSendCodeAPI.m in Sources */,

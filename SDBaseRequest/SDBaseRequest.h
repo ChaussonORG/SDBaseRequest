@@ -15,6 +15,7 @@
 #import "SDForgetPasswordAPI.h"
 #import "SDSendCodeAPI.h"
 #import "SDUpdateProfileAPI.h"
-
+#import "SDAuthorLoginAPI.h"
+#import "SDFeedBackAPI.h"
 
 
