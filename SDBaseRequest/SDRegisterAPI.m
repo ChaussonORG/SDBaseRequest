@@ -8,6 +8,12 @@
 
 #import "SDRegisterAPI.h"
 
+@interface SDRegisterAPI()
+
+@property (nonatomic , strong) NSString *invitationCode;
+
+@property (nonatomic , strong) NSString *invitationCodeKey;
+@end
 @implementation SDRegisterAPI
 - (instancetype)initWithAccount:(NSString *)account
                        password:(NSString *)password
@@ -21,10 +27,26 @@
     }
     return self;
 }
+
+- (void)fetchInvitationCode:(NSString *)invitationCode invitationCodeKey:(NSString *)invitationCodeKey{
+    
+    _invitationCode = invitationCode;
+    
+    _invitationCodeKey = invitationCodeKey;
+    
+}
 - (NSDictionary *)requestParameter{
-    return @{@"cellphone":self.account,
-             @"password":self.password,
-             @"phoneCode":self.code};
+    
+    NSMutableDictionary *paraDic = [NSMutableDictionary dictionary];
+    
+    [paraDic setObject:self.account forKey:@"cellphone"];
+    [paraDic setObject:self.password forKey:@"password"];
+    [paraDic setObject:self.code forKey:@"phoneCode"];
+    
+    if (self.invitationCode) {
+        [paraDic setObject:self.invitationCode forKey:self.invitationCodeKey];
+    }
+    return paraDic;
 }
 - (CHRequestMethod)requestMethod{
     return CHRequestMethodPost;
