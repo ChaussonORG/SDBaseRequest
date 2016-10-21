@@ -26,14 +26,4 @@
 
 @property (nonatomic ,readonly ) NSString *code;
 
-@property (nonatomic , readonly) NSString *invitationCode;
-
-@property (nonatomic , readonly) NSString *invitationCodeKey;
-
-
-- (void)fetchInvitationCode:(NSString *)invitationCode invitationCodeKey:(NSString *)invitationCodeKey;
-
-
-
-
 @end
