@@ -26,11 +26,10 @@
 - (NSString *)requestPathUrl{
     return @"/app/profile";
 }
+- (NSString *)customUrl{
+    return [NSString stringWithFormat:@"%@%@",[CHNetworkConfig sharedInstance].baseUrl,[self requestPathUrl]];
+}
 - (void)requestCompletionBeforeBlock{
     _baseResponse = [[SDBaseResponse alloc]initWithJSON:self.response.responseJSONObject];
 }
-// 拼装一个逛tv的测试token
-//- (NSDictionary *)requestHeaderFieldValueDictionary{
-//    return @{@"Cookie":@"token=9JRnMNa2iFB0BteGb%2FwXcQajKM%2BpTvwhkj%2Fnz6Ea7bzMjb%2Bkgfm1TCxFoeOFbjnZWmg%2BUkUyms%2Ftrpl2lsTWlFLjcjfkfFSLoZYK6wJu4lZg%2BcqOqT7GpKOtUC7%2BihLFd8mK%2FOiSpbAC5ERzgzUn%2FA%3D%3D"};
-//}
 @end

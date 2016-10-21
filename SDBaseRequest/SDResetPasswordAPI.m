@@ -32,6 +32,9 @@
 - (NSString *)requestPathUrl{
     return @"/app/password";
 }
+- (NSString *)customUrl{
+    return [NSString stringWithFormat:@"%@%@",[CHNetworkConfig sharedInstance].baseUrl,[self requestPathUrl]];
+}
 - (void)requestCompletionBeforeBlock{
     _baseResponse = [[SDBaseResponse alloc]initWithJSON:self.response.responseJSONObject];
 }

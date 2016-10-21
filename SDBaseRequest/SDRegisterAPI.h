@@ -16,6 +16,11 @@
                        password:(NSString *)password
                       phoneCode:(NSString *)code;
 
+- (instancetype)initWithAccount:(NSString *)account
+                       password:(NSString *)password
+                      phoneCode:(NSString *)phoneCode
+                     inviteCode:(NSString *)inviteCode;
+
 @property (nonatomic ,readonly ) SDBaseResponse *baseResponse;
 
 @property (nonatomic ,readonly ) NSString *token;
@@ -25,5 +30,7 @@
 @property (nonatomic ,readonly ) NSString *password;
 
 @property (nonatomic ,readonly ) NSString *code;
+
+@property (nonatomic ,readonly ) NSString *inviteCode;
 
 @end

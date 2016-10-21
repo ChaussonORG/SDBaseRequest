@@ -42,7 +42,10 @@
             return @"/app/auth/wb";
             break;
     }
-
+    
+}
+- (NSString *)customUrl{
+    return [NSString stringWithFormat:@"%@%@",[CHNetworkConfig sharedInstance].baseUrl,[self requestPathUrl]];
 }
 - (CHRequestMethod)requestMethod{
     return CHRequestMethodPost;

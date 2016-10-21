@@ -11,6 +11,20 @@
 @implementation SDRegisterAPI
 - (instancetype)initWithAccount:(NSString *)account
                        password:(NSString *)password
+                      phoneCode:(NSString *)phoneCode
+                     inviteCode:(NSString *)inviteCode{
+    self = [super init];
+    if (self) {
+        NSAssert(account.length > 0 && password.length > 0 && phoneCode.length > 0, @"account or password or code is nil");
+        _code = phoneCode;
+        _account = account;
+        _password = password;
+        _inviteCode = inviteCode;
+    }
+    return self;
+}
+- (instancetype)initWithAccount:(NSString *)account
+                       password:(NSString *)password
                       phoneCode:(NSString *)code{
     self = [super init];
     if (self) {
@@ -24,13 +38,17 @@
 - (NSDictionary *)requestParameter{
     return @{@"cellphone":self.account,
              @"password":self.password,
-             @"phoneCode":self.code};
+             @"phoneCode":self.code,
+             @"inviteCode":self.inviteCode};
 }
 - (CHRequestMethod)requestMethod{
     return CHRequestMethodPost;
 }
 - (NSString *)requestPathUrl{
     return @"/app/register";
+}
+- (NSString *)customUrl{
+    return [NSString stringWithFormat:@"%@%@",[CHNetworkConfig sharedInstance].baseUrl,[self requestPathUrl]];
 }
 - (void)requestCompletionBeforeBlock{
     _baseResponse = [[SDBaseResponse alloc]initWithJSON:self.response.responseJSONObject];
