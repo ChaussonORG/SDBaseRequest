@@ -7,7 +7,7 @@
 //
 
 #import "SDUploadImageAPI.h"
-
+#import <CHNetworking/CHNetworking.h>
 @implementation SDUploadImageAPI{
     NSData *_imageData;
 

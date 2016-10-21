@@ -7,7 +7,7 @@
 //
 
 #import "SDAuthorLoginAPI.h"
-
+#import <CHNetworking/CHNetworking.h>
 @implementation SDAuthorLoginAPI
 - (instancetype)initWithOpenID:(NSString *)openid
                    accessToken:(NSString *)token

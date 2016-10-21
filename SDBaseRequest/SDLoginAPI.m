@@ -7,7 +7,7 @@
 //
 
 #import "SDLoginAPI.h"
-
+#import <CHNetworking/CHNetworking.h>
 @implementation SDLoginAPI
 - (instancetype)initWithAccount:(NSString *)account
                        password:(NSString *)password{

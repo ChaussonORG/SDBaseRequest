@@ -7,7 +7,7 @@
 //
 
 #import "SDUpdateProfileAPI.h"
-
+#import <CHNetworking/CHNetworking.h>
 @implementation SDUpdateProfileAPI
 - (instancetype)initWithProfile:(NSDictionary *)profile{
     self = [super init];

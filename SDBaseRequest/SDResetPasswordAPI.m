@@ -7,7 +7,7 @@
 //
 
 #import "SDResetPasswordAPI.h"
-
+#import <CHNetworking/CHNetworking.h>
 @implementation SDResetPasswordAPI
 - (instancetype)initWithAccount:(NSString *)account
                        password:(NSString *)password

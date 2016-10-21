@@ -7,7 +7,7 @@
 //
 
 #import "SDRequestBaseConfig.h"
-
+#import <CHNetworking/CHNetworking.h>
 @implementation SDRequestBaseConfig
 
 @end

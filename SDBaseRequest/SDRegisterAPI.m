@@ -7,7 +7,7 @@
 //
 
 #import "SDRegisterAPI.h"
-
+#import <CHNetworking/CHNetworking.h>
 @implementation SDRegisterAPI
 - (instancetype)initWithAccount:(NSString *)account
                        password:(NSString *)password

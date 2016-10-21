@@ -7,7 +7,7 @@
 //
 
 #import "SDForgetPasswordAPI.h"
-
+#import <CHNetworking/CHNetworking.h>
 @implementation SDForgetPasswordAPI
 - (instancetype)initWithPassword:(NSString *)password
                    freshPassword:(NSString *)freshPassword{

@@ -7,7 +7,7 @@
 //
 
 #import "SDFeedBackAPI.h"
-
+#import <CHNetworking/CHNetworking.h>
 @implementation SDFeedBackAPI
 - (instancetype)initWithTitle:(NSString *)title
                       content:(NSString *)content{

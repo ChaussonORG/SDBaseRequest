@@ -7,7 +7,7 @@
 //
 
 #import "SDSendCodeAPI.h"
-
+#import <CHNetworking/CHNetworking.h>
 @implementation SDSendCodeAPI
 - (instancetype)initWithCellPhone:(NSString *)phone{
     self = [super init];
