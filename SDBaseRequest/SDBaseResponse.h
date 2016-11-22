@@ -11,7 +11,7 @@
 @interface SDBaseResponse : NSObject
 
 @property (nonatomic ,strong ) NSString *message;
-@property (nonatomic ,strong ) NSDictionary *data;
+@property (nonatomic ,strong ) id data;
 @property (nonatomic ,assign ) NSInteger code;
 
 - (instancetype)initWithJSON:(NSDictionary *)json;
