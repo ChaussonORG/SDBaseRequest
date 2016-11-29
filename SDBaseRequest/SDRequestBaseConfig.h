@@ -7,7 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
-
+// 该类会自动注册基础信息到CHNetworking
 @interface SDRequestBaseConfig : NSObject
+
++ (NSDictionary *)defultConfig;
+//+ (BOOL)registerConfig; // 注册基础信息
 
 @end

@@ -1,8 +1,8 @@
 Pod::Spec.new do |s|
   s.name         = "SDBaseRequest"
-  s.version      = "0.4" 
+  s.version      = "0.5" 
   s.summary      = "Using CHNetworking Requests "
-  s.description  = "增加了第三方授权登录接口的集成，目前包括QQ,WeChat,Sina "
+  s.description  = "增加了针对于CHNetworking配置的基础信息，包括版本等设备信息 "
   s.homepage     = "https://github.com/ChaussonORG/SDBaseRequest.git"
   # s.screenshots  = "www.example.com/screenshots_1.gif", "www.example.com/screenshots_2.gif"
   s.license      = "MIT"
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
 
-  s.source       = { :git => "https://github.com/ChaussonORG/SDBaseRequest.git", :tag => "0.4"}
+  s.source       = { :git => "https://github.com/ChaussonORG/SDBaseRequest.git", :tag => "0.5"}
 
  # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
