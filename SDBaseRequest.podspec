@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "SDBaseRequest"
-  s.version      = "0.5" 
+  s.version      = "0.6" 
   s.summary      = "Using CHNetworking Requests "
   s.description  = "增加了针对于CHNetworking配置的基础信息，包括版本等设备信息 "
   s.homepage     = "https://github.com/ChaussonORG/SDBaseRequest.git"
@@ -20,7 +20,7 @@ Pod::Spec.new do |s|
   # s.watchos.deployment_target = "2.0"
   # s.tvos.deployment_target = "9.0"
 
-  s.source       = { :git => "https://github.com/ChaussonORG/SDBaseRequest.git", :tag => "0.5"}
+  s.source       = { :git => "https://github.com/ChaussonORG/SDBaseRequest.git", :tag => "0.6"}
 
  # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
   #
