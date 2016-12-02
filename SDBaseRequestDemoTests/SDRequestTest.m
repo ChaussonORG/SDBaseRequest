@@ -38,50 +38,46 @@ static NSString *const Token = @"_MCH_AT=JbWnlHpgiY2usTdk1DGBnGzHk0pScgPUv9KTIVB
     
     [[CHNetworkConfig sharedInstance] addheaderFieldParameter:@{@"token":Token}];
 }
-- (void)testDataTask
-{
-    XCTestExpectation *expectation = [self expectationWithDescription:@"asynchronous request"];
-    
-    NSURL *url = [NSURL URLWithString:@"http://www.apple.com"];
-    NSURLSessionTask *task = [session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
-        XCTAssertNil(error, @"dataTaskWithURL error %@", error);
-        
-        if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
-            NSInteger statusCode = [(NSHTTPURLResponse *) response statusCode];
-            XCTAssertEqual(statusCode, 200, @"status code was not 200; was %lu", statusCode);
-        }
-        
-        XCTAssert(data, @"data nil");
-        
-        // do additional tests on the contents of the `data` object here, if you want
-        
-        // when all done, Fulfill the expectation
-        
-        [expectation fulfill];
-    }];
-    [task resume];
-    
-    [self waitForExpectationsWithTimeout:10.0 handler:nil];
-}
+
 - (void)testFeedBack {
     XCTestExpectation *expectation = [self expectationWithDescription:@"异步加载FeedBack"];
-    SDFeedBackAPI *feed = [[SDFeedBackAPI alloc]initWithTitle:@"测试建议" content:@"很多建议"];
-    [feed startWithSuccessBlock:^(__kindof SDFeedBackAPI *request) {
+    SDLoginAPI *login = [[SDLoginAPI alloc]initWithAccount:@"13761057550" password:@"111111"];
+    [login startWithSuccessBlock:^(__kindof SDLoginAPI *request) {
         [expectation fulfill];
-        XCTAssertEqual(request.baseResponse.code, 200,"反馈提交失败");
-        
+        XCTAssertEqual(request.baseResponse.code,200, "登录失败");        
     } failureBlock:^(__kindof CHBaseRequest *request) {
         [expectation fulfill];
         XCTFail("服务器请求失败");
+ 
     }];
-    // 等待 时间 期望预期达成
+
+//    // 等待 时间 期望预期达成
     [self waitForExpectationsWithTimeout:10 handler:nil];
 }
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
-}
+//- (void)testDataTask
+//{
+//    XCTestExpectation *expectation = [self expectationWithDescription:@"asynchronous request"];
+//
+//    NSURL *url = [NSURL URLWithString:@"http://www.apple.com"];
+//    NSURLSessionTask *task = [session dataTaskWithURL:url completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+//        XCTAssertNil(error, @"dataTaskWithURL error %@", error);
+//
+//        if ([response isKindOfClass:[NSHTTPURLResponse class]]) {
+//            NSInteger statusCode = [(NSHTTPURLResponse *) response statusCode];
+//            XCTAssertEqual(statusCode, 200, @"status code was not 200; was %lu", statusCode);
+//        }
+//
+//        XCTAssert(data, @"data nil");
+//
+//        // do additional tests on the contents of the `data` object here, if you want
+//
+//        // when all done, Fulfill the expectation
+//
+//        [expectation fulfill];
+//    }];
+//    [task resume];
+//
+//    [self waitForExpectationsWithTimeout:10.0 handler:nil];
+//}
 
 @end
