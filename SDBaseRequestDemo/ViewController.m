@@ -28,13 +28,12 @@ static NSString *const Token = @"_MCH_AT=JbWnlHpgiY2usTdk1DGBnGzHk0pScgPUv9KTIVB
     [self testFeedBack];
 }
 - (void)testFeedBack {
-    SDSendCodeAPI *code = [[SDSendCodeAPI alloc]initWithCellPhone:@"18116342840"];
-    [code startWithSuccessBlock:^(__kindof SDFeedBackAPI *request) {
-        NSAssert(request.baseResponse.code == 200, @"反馈提交失败");
-        NSAssert(request.baseResponse == nil, @"反馈提交失败");
-    } failureBlock:^(__kindof CHBaseRequest *request) {
-        NSAssert(NO, @"服务器连接失败");
-    }];
+//    SDSendCodeAPI *code = [[SDSendCodeAPI alloc]initWithCellPhone:@"18116342840"];
+//    [code startWithSuccessBlock:^(__kindof SDFeedBackAPI *request) {
+//        NSAssert(request.baseResponse.code != 200, @"反馈提交失败");
+//    } failureBlock:^(__kindof CHBaseRequest *request) {
+//        NSAssert(NO, @"服务器连接失败");
+//    }];
     // 等待 时间 期望预期达成
 }
 - (void)didReceiveMemoryWarning {
